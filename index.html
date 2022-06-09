@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>青衣每日学习计划</title>
+<style type="text/css">
+html,body {
+padding: 0;
+margin: 0;
+}
+body {
+width:  100%;
+height: 100vh;
+background: url('./construction.png') no-repeat;
+background-size: 100%  100%;
+}
+label{
+    cursor: pointer;
+}
+label::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #777777;
+    border-radius: 0;
+    margin-left: -31px;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+label:hover::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #00bdad;
+    background-color: #00bdad;
+    border-radius: 0;
+    margin-left: -31px;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+</style>
+</head>
+<body>
+<div>
+    <h1 style="color: white;white-space: nowrap;position: absolute;left:50%;transform: translate(-50%);margin-top: 30px;">Study Project</h1>
+    <div style="background-color: white;position: absolute;left:50%;transform: translate(-50%);height: 540px;margin-top: 130px;width: 350px;border-radius: 10px;"></div>
+    <div style="background-color: rgb(83, 83, 83);position: absolute;left:50%;transform: translate(-50%);height: 60px;margin-top: 130px;width: 350px;border-radius: calc(0.5rem - 1px) calc(.5rem - 1px) 0 0;">
+        <h3 style="color: white;text-align: center;">日常学习清单</h3>
+    </div>
+    <label id="chk_1" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 200px;" onclick="ock_1()" for="daily_study_project">
+        <span style="top:20px">20个英语单词</span>
+    </label>
+    <label id="chk_2" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 240px;"  onclick="ock_2()" for="daily_study_project">
+        <span style="top:20px">1篇古诗词</span>
+    </label>
+    <label id="chk_3" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 280px;"  onclick="ock_3()" for="daily_study_project">
+        <span style="top:20px">日常英语听力</span>
+    </label>
+    <label id="chk_4" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 320px;"  onclick="ock_4()" for="daily_study_project">
+        <span style="top:20px">英语单词默写</span>
+    </label>
+    <label id="chk_5" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 360px;"  onclick="ock_5()" for="daily_study_project">
+        <span style="top:20px">英语单词抄写</span>
+    </label>
+    <label id="chk_6" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 400px;"  onclick="ock_6()" for="daily_study_project">
+        <span style="top:20px">数学专练</span>
+    </label>
+    <label id="chk_7" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 440px;"  onclick="ock_7()" for="daily_study_project">
+        <span style="top:20px">物理专练</span>
+    </label>
+    <label id="chk_8" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 480px;"  onclick="ock_8()" for="daily_study_project">
+        <span style="top:20px">化学专练</span>
+    </label>
+    <label id="chk_9" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 520px;"  onclick="ock_9()" for="daily_study_project">
+        <span style="top:20px">生物专练</span>
+    </label>
+    <label id="chk_10" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 560px;"  onclick="ock_10()" for="daily_study_project">
+        <span style="top:20px">语文专练</span>
+    </label>
+    <label id="chk_11" style="position: absolute;left:50%;transform: translate(-50%);color: rgb(0, 0, 0);font-size: 1.5rem;margin-top: 600px;"  onclick="ock_11()" for="daily_study_project">
+        <span style="top:20px">英语专练</span>
+    </label>
+</div>
+</body>
+<script>
+    function ock_1(){
+        var sp = document.getElementById('chk_1')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_2(){
+        var sp = document.getElementById('chk_2')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_3(){
+        var sp = document.getElementById('chk_3')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_4(){
+        var sp = document.getElementById('chk_4')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_5(){
+        var sp = document.getElementById('chk_5')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_6(){
+        var sp = document.getElementById('chk_6')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_7(){
+        var sp = document.getElementById('chk_7')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_8(){
+        var sp = document.getElementById('chk_8')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_9(){
+        var sp = document.getElementById('chk_9')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_10(){
+        var sp = document.getElementById('chk_10')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    function ock_11(){
+        var sp = document.getElementById('chk_11')
+         if (sp.style.textDecoration != 'line-through'){
+             sp.style.textDecoration = 'line-through';
+             sp.style.color = 'rgb(0, 0, 0,0.5)';
+         }
+         else{
+         sp.style.textDecoration = 'none';
+         sp.style.color = 'rgb(0, 0, 0)';
+         }
+    }
+    
+</script>
+</html>
